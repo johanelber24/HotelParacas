@@ -7,13 +7,13 @@ function incluirTemplate( $nombre ) {
 }
 
 function fechaMinima(){
-    $fechaMinima = date("Y-m-05");
+    $fechaMinima = date("Y-m-d");
     // echo $fechaMinima;
     return $fechaMinima;
 }
 
 function fechaMaxima(){
-    $d = date("05");
+    $d = date("d");
     $m = date("m");
     $y = date("Y");
 

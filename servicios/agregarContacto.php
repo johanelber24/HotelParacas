@@ -6,7 +6,7 @@
     $correoContacto = trim($_POST["correoContacto"]);
     $telefonoContacto = trim($_POST["telefonoContacto"]);
     $mensajeContacto = trim($_POST["mensajeContacto"]);
-    $fecha = date("05/m/Y");
+    $fecha = date("d/m/Y");
 
     $errores = [];
 
