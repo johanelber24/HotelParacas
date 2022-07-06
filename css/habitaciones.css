@@ -1,0 +1,290 @@
+:root{
+    --principal: #FBB900;
+    --secundario: #fd893c;
+    --rojo: #dd4040;
+    --negro: #000000;
+    --blanco: #ffffff;
+    --gris: rgba(200,200,200,0.8);
+    --gris-oscuro: #707070;
+    --texto: rgba(100, 100, 100, .8);
+    --fuentePagina: 'Nunito', sans-serif;
+}
+
+
+/* Habitaciones */
+.habitacion-reserva{
+    padding: 5rem 0;
+}
+.habitacion-reserva-datos-m{
+    margin-top: 4rem;
+}
+.habitacion-reserva-descripcion, .habitacion-reserva-formulario{
+    background-color: rgb(85, 85, 85);
+    padding: 2.5rem 1.5rem;
+    margin-top: 2rem;
+}
+@media (min-width: 992px) {
+    .habitacion-reserva-contenido{
+        display: flex;
+    }
+    .habitacion-reserva-img-m{
+        flex: 0 0 32%;
+    }
+    .habitacion-reserva-datos-m{
+        flex: 0 0 67%;
+        margin-left: auto;
+        margin-top: initial;
+        display: flex;
+    }
+    .habitacion-reserva-descripcion,.habitacion-reserva-formulario{
+        flex: 0 0 50%;
+        margin-top: initial;
+    }
+}
+.habitacion-reserva-datos-m h3{
+    color: var(--principal);
+    font-weight: 600;
+    position: relative;
+    display: block;
+    font-size: 2.4rem;
+}
+.habitacion-reserva-datos-m h3::after{
+    content: '';
+    display: block;
+    background-color: var(--principal);
+    width: 100%;
+    height: .2rem;
+    position: absolute;
+    bottom: -8px;
+}
+/* Habitacion caracteristicas */
+.habitacion-reserva-caracteristicas-datos{
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+}
+.habitacion-reserva-caracteristicas-datos li{
+    margin-top: .2rem;
+}
+.habitacion-reserva-caracteristicas-datos li:first-of-type{
+    margin-top: 1rem;
+}
+.habitacion-reserva-caracteristicas-datos li i{
+    color: var(--principal);
+    margin-right: .5rem;
+}
+.habitacion-reserva-caracteristicas-datos li span{
+    color: var(--blanco);
+    font-size: 1.2rem;
+}
+/* Habitacion detalles */
+.habitacion-reserva-detalles{
+    margin-top: 1rem;
+}
+.habitacion-reserva-detalles-datos{
+    margin: 0;
+    list-style: none;
+    padding: 1rem;
+}
+.habitacion-reserva-detalles-datos li{
+    margin-top: .2rem;
+    color: var(--blanco);
+}
+.habitacion-reserva-detalles-datos li:first-of-type{
+    margin-top: 1rem;
+}
+.habitacion-reserva-detalles-datos li span{
+    color: var(--principal);
+    font-size: 1.6rem;
+}
+/* Formulario */
+.habitacion-reserva-formulario form{
+    padding: 1rem;
+}
+.reserva-datos:first-of-type{
+    margin-top: 1rem;
+}
+.reserva-datos{
+    display: block;
+    color: var(--blanco);
+    margin-top: 2rem;
+    font-size: 1.6rem;
+}
+
+.reserva-datos input{
+    border: 0;
+    outline: none;
+    width: 100%;
+    background-color: rgb(55, 55, 55);
+    color: var(--blanco);
+    padding: 1.2rem 1rem;
+    font-size: 1.4rem;
+    position: relative;
+    transition: all .3s ease;
+    transform: translateY(10%);
+    border-bottom: 2px solid;
+    border-color: var(--blanco);
+    line-height: 2rem;
+}
+.reserva-datos select{
+    border: 0;
+    outline: none;
+    width: 100%;
+    background-color: rgb(55, 55, 55);
+    color: var(--blanco);
+    padding: 1.2rem 1rem;
+    font-size: 1.4rem;
+    position: relative;
+    transition: all .3s ease;
+    transform: translateY(10%);
+    border-bottom: 2px solid;
+    border-color: var(--blanco);
+    line-height: 2rem;
+}
+.reserva-datos textarea{
+    border: 0;
+    outline: none;
+    width: 100%;
+    background-color: rgb(55, 55, 55);
+    color: var(--blanco);
+    font-size: 1.4rem;
+    position: relative;
+    transition: all .3s ease;
+    transform: translateY(10%);
+    border-bottom: 2px solid;
+    border-color: var(--blanco);
+}
+.reserva-datos textarea{
+    padding: 0.2rem;
+}
+.reserva-datos input:focus, textarea:focus, select:focus{
+    border-color: var(--principal);
+    transform: translateY(0%);
+}
+.reserva-datos p{
+    display: none;
+    margin: 2rem 0 0 0;
+    color: var(--rojo);
+    font-weight: 900;
+    font-size: 1.8rem;
+}
+
+/* Mostrar modal */
+.modal-reservas{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 25rem;
+    height: 25rem;
+    margin-top: -12.5rem;
+    margin-left: -12.5rem;
+    background-color: rgb(42, 182, 7);
+    color: var(--blanco);
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1; 
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all .5s ease;
+}
+@media (min-width: 400px) {
+    .modal-reservas{
+        width: 35rem;
+        height: 20rem;
+        margin-top: -10rem;
+        margin-left: -17.5rem;
+    }
+}
+.modal-reservas i{
+    display: block;
+    font-size: 4rem;
+}
+.modal-reservas h2{
+    font-size: 2.4rem;
+    margin: 1rem 0 0 0;
+}
+.modal-reservas p{
+    margin: 1rem 0 0 0;
+    font-weight: 700;
+}
+/* .modal-reservas .cerrar-modal-reservas{
+    margin: 1rem auto 0 auto;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: var(--rojo);
+    padding: .5rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 2px var(--rojo);
+    transition: all .3s ease-out;
+}
+.modal-reservas .cerrar-modal-reservas:hover{
+    background-color: var(--blanco);
+    color: var(--negro);
+    box-shadow: 0px 0px 10px 2px rgb(125,125,125);
+    font-weight: 700;
+} */
+
+/* Boton */
+.reserva-datos-boton{
+    margin-top: 4rem;
+}
+.boton-reservar{
+    border: 0;
+    outline: none;
+    padding: 2rem 3rem;
+    display: block;
+    width: 100%;
+    background-color: var(--principal);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: all .3s ease-in-out;
+}
+.boton-reservar:hover{
+    background-color: var(--blanco);
+}
+
+/* Boton regresar */
+.habitacion-reserva-volver{
+    margin-top: 2rem;
+}
+.boton-volver{
+    border: 0;
+    outline: none;
+    padding: 1.5rem 3rem;
+    display: inline-block;
+    background-color: var(--principal);
+    font-size: 1.5rem;
+    color: var(--negro);
+    font-weight: 700;
+    transform-style: preserve-3d;
+    outline: 1px solid transparent;
+    transition: all .5s ease-in-out;
+}
+.boton-volver::after{
+    content: 'VOLVER';
+    position: absolute;
+    z-index: -1;
+    padding: 1.5rem 3rem;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secundario);
+    color: var(--blanco);
+    transition: all .5s ease-in-out;
+    left: 0;
+    top: -100%;
+    transform-origin: 0% 100%;
+    transform: rotateX(90deg);
+}
+.boton-volver:hover{
+    transform: translateY(40px) rotateX(-90deg);
+}
+

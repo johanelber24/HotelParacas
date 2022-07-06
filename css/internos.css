@@ -1,0 +1,534 @@
+:root{
+    --principal: #FBB900;
+    --secundario: #fd893c;
+    --rojo: #dd4040;
+    --negro: #000000;
+    --blanco: #ffffff;
+    --gris: rgba(200,200,200,0.8);
+    --gris-oscuro: #707070;
+    --texto: rgba(100, 100, 100, .8);
+    --fuentePagina: 'Nunito', sans-serif;
+}
+
+/* Mapa */
+.banner-mapa{
+    position: relative;
+    height: 100vh;
+    background-image: url(../img/internos/banner-mapa.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.mapa-hotel{
+    padding: 0;
+}
+.direccion-mapa{
+    text-align: center;
+}
+.direccion-mapa p{
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 2rem 0 2rem 0;
+    text-align: center;
+}
+/* Mapa */
+
+
+/* Contacto */
+.banner-contacto{
+    position: relative;
+    height: 100vh;
+    background-image: url(../img/internos/banner-contacto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.contacto{
+    padding: 10rem 0;
+}
+
+/* Contacto contenido Flex */
+@media (min-width: 992px) {
+    .contacto-contenido{
+        display: flex;
+    }
+    .contacto-datos-m{
+        flex: 0 0 50%;
+    }
+    .contacto-formulario-m{
+        /* flex: 0 0 50%; */
+        flex: 0 0 45%;
+        margin: 10.5rem 0 0 auto;
+    }
+}
+
+/* Contacto datos */
+/* Contacto datos titulo */
+.contacto-datos-titulo h4{
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    position: relative;
+    display: inline-block;
+    left: 5rem;
+    margin: 0;
+}
+.contacto-datos-titulo h4::after{
+    content: '';
+    width: 4rem;
+    height: .2rem;
+    background-color: var(--principal);
+    display: block;
+    position: absolute;
+    left: -5rem;
+    top: 12px;
+}
+.contacto-datos-titulo h2{
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 500;
+    margin: 2rem 0 0 0;
+    line-height: 4rem;
+}
+
+/* Contacto datos info */
+.contacto-datos-info{
+    margin-top: 2rem;   
+}
+.info-contacto{
+    padding: 5rem 2rem;
+    text-align: center;
+    position: relative;
+}
+.info-contacto::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--principal);
+    bottom: 0;
+    left: 0;
+    right: auto;
+}
+@media (min-width: 992px) {
+    .info-contacto::after{
+        width: 90%;
+        left: 5%;
+        right: auto;
+    }
+}
+.info-contacto i{
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    color: var(--principal);
+}
+.info-contacto h3{
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+    margin: 0 0 2rem 0;
+}
+.info-contacto p{
+    margin: 0;
+}
+
+/* Contacto formulario */
+.formulario-contacto{
+    background-color: rgb(85, 85, 85);
+    padding: 3rem 2rem;
+    color: var(--blanco);
+}
+@media (min-width: 545px) {
+    .formulario-contacto{
+        padding: 6rem;
+        min-height: 80rem;
+    }
+}
+
+.formulario-contacto-titulo h4{
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    left: 3rem;
+}
+.formulario-contacto-titulo h4::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 2rem;
+    height: 2px;
+    background-color: var(--principal);
+    left: -3rem;
+    top: 12px;
+}
+@media (min-width: 545px) {
+    .formulario-contacto-titulo h4{
+        left: 0;
+    }
+    .formulario-contacto-titulo h4::after{
+        width: 4rem;
+        height: 2px;
+        left: -5rem;
+        top: 12px;
+    }
+}
+
+.formulario-contacto-titulo h2{
+    font-size: 3.2rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+
+.input-contacto:nth-child(2){
+    margin-top: 4rem;
+}
+.input-contacto{
+    margin-top: 3rem;
+}
+
+.input-contacto label{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: .8rem;
+}
+
+.input-contacto input{
+    border: 0;
+    outline: none;
+    width: 100%;
+    background-color: rgb(55, 55, 55);
+    color: var(--blanco);
+    padding: 1.2rem 1rem;
+    font-size: 1.4rem;
+    position: relative;
+    transition: all .3s ease;
+    transform: translateY(10%);
+    border-bottom: 2px solid;
+    border-color: var(--blanco);
+}
+.input-contacto textarea{
+    border: 0;
+    outline: none;
+    width: 100%;
+    background-color: rgb(55, 55, 55);
+    color: var(--blanco);
+    padding: 1.2rem 1rem;
+    font-size: 1.4rem;
+    position: relative;
+    transition: all .3s ease;
+    transform: translateY(10%);
+    border-bottom: 2px solid;
+    border-color: var(--blanco);
+}
+.input-contacto input{
+    padding: 1.2rem 1rem;
+}
+.input-contacto textarea{
+    padding: 0.2rem;
+}
+.input-contacto input:focus, textarea:focus{
+    border-color: var(--principal);
+    transform: translateY(0%);
+}
+
+/* Boton formulario */
+.input-boton{
+    margin-top: 5rem;
+}
+.boton-formulario{
+    border: none;
+    outline: none;
+    background-color: var(--principal);
+    padding: 1.8rem 6rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--negro);
+    transition: all .3s ease-in;
+}
+.boton-formulario:hover{
+    background-color: var(--blanco);
+}
+
+/* Requerid formulario */
+.input-contacto p{
+    display: none;
+    margin: 2rem 0 0 0;
+    color: var(--rojo);
+    font-weight: 900;
+    font-size: 1.8rem;
+}
+
+/* Reiniciar */
+.reiniciar-formulario-contacto{
+    display: inline-block;
+    background-color: var(--secundario);
+    padding: 1.8rem 3rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--blanco);
+    transition: all .3s ease-in;
+}
+.reiniciar-formulario-contacto:hover{
+    background-color: var(--secundario);
+    color: var(--blanco);
+}
+
+/* Mostrar modal */
+.modal-contacto{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 25rem;
+    height: 12rem;
+    margin-top: -6rem;
+    margin-left: -12.5rem;
+    background-color: rgb(42, 182, 7);
+    color: var(--blanco);
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
+    z-index: -1; 
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all .5s ease;
+}
+@media (min-width: 400px) {
+    .modal-contacto{
+        width: 30rem;
+        height: 15rem;
+        margin-top: -7.5rem;
+        margin-left: -15rem;
+    }
+}
+.modal-contacto i{
+    display: block;
+    font-size: 4rem;
+}
+.modal-contacto h2{
+    font-size: 2.4rem;
+    margin: 1rem 0 0 0;
+}
+/* Contacto */
+
+
+
+/* Reservas */
+.banner-reservas{
+    position: relative;
+    height: 100vh;
+    background-image: url(../img/internos/banner-reservas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+/* Habitaciones */
+.habitaciones{
+    padding-bottom: 10rem;
+}
+/* Menu habitaciones */
+.menu-habitaciones{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-habitaciones li{
+    display: block;
+    padding: 1.5rem 2rem;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    color: var(--blanco);
+    font-size: 1.6rem;
+    line-height: 3rem;
+    font-weight: 700;
+    transition: all .3s ease-in-out;
+}
+.estandar,.premium{
+    background-color: rgb(100, 100, 100);
+}
+.habitaciones-active{
+    background-color: rgb(20, 20, 20);
+}
+
+
+/* Habitaciones tipo */
+.habitaciones-estandar,.habitaciones-premium{
+    display: none;
+}
+.habitaciones-tipo-active{
+    display: block;
+    transition: all .3s ease-in-out;
+}
+
+/* Estandar */
+/* Individual */
+.habitacion-categoria{
+    position: relative;
+    margin-top: 8rem;
+}
+.habitacion-categoria:first-of-type{
+    margin-top: 4rem;
+}
+/* Titulo habitacion */
+.habitacion-categoria-img{
+    position: relative;
+}
+.titulo-categoria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (min-width: 1200px) {
+    .titulo-categoria{
+        width: 50%;
+    }
+}
+.titulo-categoria h2{
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    color: var(--blanco);
+    line-height: 8rem;
+    text-align: center;
+    padding: 1rem;
+    font-weight: 700;
+    margin: 0;
+} 
+@media (min-width: 545px) {
+    .titulo-categoria h2{
+        font-size: 3rem;
+    } 
+}
+.titulo-categoria h2::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: .3rem;
+    background-color: var(--principal);
+    left: 0;
+    bottom: 2rem;
+}
+/* Descripcion */
+.habitacion-categoria .habitacion-categoria-descripcion{
+    margin-top: 2rem;
+    max-width: 100%;
+    min-height: 60rem;
+    background-color: rgba(0, 0, 0, .9);
+}
+@media (min-width: 1200px) {
+    .habitacion-categoria .habitacion-categoria-descripcion{
+        margin-top: initial;
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+.categoria-descripcion-datos,.categoria-descripcion-caracteristicas{
+    padding: 2rem;
+    margin: 0;
+    list-style: none;
+}
+.categoria-descripcion-datos{
+    text-align: center;
+}
+.categoria-descripcion-datos li{
+    display: inline-block;
+    margin: 1rem;
+    text-align: center;
+}
+.categoria-descripcion-datos li i{
+    color: var(--principal);
+    font-size: 3rem;
+}
+.categoria-descripcion-datos li span{
+    display: block;
+    color: var(--blanco);
+    font-size: 1.5rem;
+}
+.categoria-descripcion-caracteristicas h3{
+    font-size: 2rem;
+    color: var(--blanco);
+    font-weight: 700;
+}
+.categoria-descripcion-caracteristicas li{
+    margin-top: 2rem;
+}
+.categoria-descripcion-caracteristicas li i{
+    color: var(--principal);
+    margin-right: .5rem;
+}
+.categoria-descripcion-caracteristicas li span{
+    color: var(--blanco);
+    font-size: 1.2rem;
+}
+.categoria-descripcion-precio{
+    padding: 2rem;
+}
+.categoria-descripcion-precio h3{
+    color: var(--principal);
+    font-weight: 900;
+    margin: 0;
+}
+.categoria-descripcion-precio span{
+    font-weight: 400;
+    color: var(--blanco);
+    font-size: 1.5rem;
+}
+.categoria-descripcion-reservar{
+    padding: 2rem;
+}
+.categoria-descripcion-reservar a{
+    border: none;
+    position: relative;
+    background: none;
+    display: inline-block;
+    background-color: var(--principal);
+    padding: 2rem 6rem;
+    color: var(--negro);
+    font-weight: 700;
+    transform-style: preserve-3d;
+    outline: none;
+    outline: 1px solid transparent;
+    transition: all .3s ease-in-out;
+}
+.categoria-descripcion-reservar a::after{
+    content: 'RESERVAR';
+    position: absolute;
+    padding: 2rem 6rem;
+    z-index: -1;
+    background-color: var(--blanco);
+    transition: all .3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -100%;
+    transform-origin: 0% 100%;
+    transform: rotateX(90deg);
+}
+.categoria-descripcion-reservar a:hover{
+    transform: translateY(40px) rotateX(-90deg);
+}
